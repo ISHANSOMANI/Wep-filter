@@ -1,0 +1,19 @@
+h3{
+    font-family: Algerian;
+    font-weight: bold;
+    font-size: 45px !important ;
+}
+canvas{
+    border: solid 5px; 
+    animation-name:hehe;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+@keyframes hehe{
+    from{box-shadow: -7px 5px 30px red;}
+    to{box-shadow: 8px -5px 30px goldenrod;}
+}
+
+.btn-warning:hover{
+background-color: rgb(230, 49, 17);
+}
