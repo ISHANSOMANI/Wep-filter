@@ -5,6 +5,9 @@ function setup(){
  video.size(400,300)
  video.hide()
  
+ noseX = 0
+ noseY = 0
+
  poseNet = ml5.poseNet(video,modeloaded);
  poseNet.on('pose',gotPoses)
  }
@@ -18,10 +21,15 @@ function setup(){
  function gotPoses(results){
      if (results.length > 0){
          console.log(results)
-         console.log("nose_x "+results[0].pose.nose.x)
-         console.log("nose_y "+results[0].pose.nose.y)
+         noseX=results[0].pose.nose.x-10;
+         noseY=results[0].pose.nose.y;
      }
  }
  function draw(){
  image(video, 0, 0, 400, 300);
+ image(nose,noseX,noseY,30,30)
+ }
+ 
+ function preload(){
+     muuch = loadImage("https://i.postimg.cc/1RvnpjBV/maustache.png")
  }
