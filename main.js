@@ -21,15 +21,15 @@ function setup(){
  function gotPoses(results){
      if (results.length > 0){
          console.log(results)
-         noseX=results[0].pose.nose.x-10;
+         noseX=results[0].pose.nose.x-12;
          noseY=results[0].pose.nose.y;
      }
  }
  function draw(){
  image(video, 0, 0, 400, 300);
- image(nose,noseX,noseY,30,30)
+ image(muuch,noseX,noseY,30,30)
  }
  
  function preload(){
-     muuch = loadImage("https://i.postimg.cc/1RvnpjBV/maustache.png")
+     muuch = loadImage("https://i.postimg.cc/3x3QzSGq/m.png")
  }
